@@ -10,7 +10,7 @@ const io = require('socket.io')(httpServer)
 app.use(express.static(path.join(__dirname,'..', 'build')))
 
 require('./controllers/socketController')(io)
-let port  = process.env.port || 3001
+let port  = process.env.port
 httpServer.listen( port, () => {
   console.log('listening on port', port)
 })
